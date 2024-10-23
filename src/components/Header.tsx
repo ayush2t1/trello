@@ -1,23 +1,31 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../public/trello.webp";
+import logo from "../../public/Trello_logo.svg.png";
 import Link from "next/link";
+import { Search } from "lucide-react";
 
 const Header = () => {
   return (
-    <nav className="flex items-center justify-between bg-red-200 px-10">
+    <nav className="flex items-center justify-between bg-gray-300 px-10 py-3 rounded-b-2xl">
       <Link href={"/"}>
         <Image
           src={logo}
           alt="logo"
-          height={30}
-          width={100}
+          height={50}
+          width={160}
           className="h-[50px]"
         />
       </Link>
       <div className="flex items-center gap-3">
-        <form action="">
-          <input placeholder="Search" className="p-1 rounded-md"></input>
+        <form
+          action=""
+          className="flex items-center gap-1 bg-white p-1 rounded-md"
+        >
+          <Search className="text-gray-400 " />
+          <input placeholder="Search" className="outline-none" />
+          <button hidden type="submit">
+            Search
+          </button>
         </form>
         <div className="text-white flex items-center justify-center rounded-full bg-blue-600 w-[35px] h-[35px] font-semibold text-sm">
           AS
